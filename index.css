@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
- 
 nav {
   display: flex;
   justify-content: space-between;
@@ -111,10 +110,16 @@ nav {
   width: 10vw;
   border-radius: 0.2vw;
   background-color: #6a9739;
-   color: #fff;
+  color: #fff;
   text-transform: uppercase;
   border: none;
   font-size: 1vw;
+}
+
+.shopnowbtn:hover{
+  background-color: #9ede58;
+  cursor: pointer;
+  transition: all ease 500ms;
 }
 
 .banner {
@@ -161,7 +166,7 @@ nav {
 }
 
 .bestsellingproducts {
-    /* background-color: red; */
+  /* background-color: red; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -230,9 +235,9 @@ nav {
 .farm-cards {
   background-color: #fff;
   height: 20vw;
-  
+
   /* border: 1px solid black; */
-    width: 18vw;
+  width: 18vw;
   border-radius: 0.4vw;
   display: flex;
   flex-direction: column;
@@ -240,25 +245,24 @@ nav {
   padding: 1vw;
 }
 
-
-#farm-card-1{
-    background-image: url("./images/farm1.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
+#farm-card-1 {
+  background-image: url("./images/farm1.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
 }
-#farm-card-2{
-    background-image: url("./images/farm2.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
+#farm-card-2 {
+  background-image: url("./images/farm2.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
 }
 
-#farm-card-3{
-    background-image: url("./images/farm3.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
+#farm-card-3 {
+  background-image: url("./images/farm3.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
 }
 .farm-heading {
   /* background-color: red; */
@@ -275,25 +279,348 @@ nav {
 
 .farm-heading p {
   font-family: "Poppins", sans-serif;
-  font-size: .8vw;
+  font-size: 0.8vw;
 }
 
 .farm-heading h1::selection {
-    background-color: #9ede58;
-  }
-
-.farm-heading p::selection {
-    background-color: #9ede58;
-  }
-
-.farm-cards button{
-    margin-top: 1vw;
+  background-color: #9ede58;
 }
 
-.farm-cards button:hover{
-    background-color: #9ede58;
-    cursor: pointer;
-    transition: all ease 500ms;
+.farm-heading p::selection {
+  background-color: #9ede58;
+}
+
+.farm-cards button {
+  margin-top: 1vw;
 }
 
  
+
+
+
+.discountBanner {
+  font-family: "Merriweather", serif;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18vw;
+  padding: 3vw 1vw;
+}
+
+.discountBanner h1 {
+  font-size: 1.5vw;
+  font-weight: 600;
+}
+
+ 
+
+.tryforfree {
+  font-family: "Merriweather", serif;
+  background-color: rgb(243, 243, 243);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw 1vw;
+}
+
+.tryforfree h2 {
+  color: #000;
+  font-size: 1vw;
+  font-weight: 600;
+}
+
+.trendingproducts {
+  /* background-color: red; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5vw;
+}
+
+.trendingproductscontainer h1 {
+  font-family: "Merriweather", serif;
+  font-size: 2vw;
+}
+.trendingproductscontainer {
+  /* background-color: blue; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trendingproductscards {
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: center;
+  gap: 0.6vw;
+}
+
+.customerReview {
+  /* background-color: coral; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* padding: 0vw 20vw; */
+}
+
+.customerReviewcontainer {
+  width: 60%;
+  /* background-color: lightblue; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.customerReviewcontainer h1 {
+  font-family: "Merriweather", serif;
+  font-size: 2vw;
+}
+
+.customerReviewcards {
+  /* background-color: lightgreen; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1.5vw;
+}
+
+.reviewcard {
+  width: 35%;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw;
+  gap: 0.9vw;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0.1vw 0.1vw 0.5vw rgba(0, 0, 0, 0.148);
+  border-radius: 1vw;
+}
+
+.reviewcard p {
+  font-size: 0.8vw;
+  text-align: center;
+}
+
+.reviewerContact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+
+.rating {
+  color: #f0ad4e;
+}
+.discountCard {
+  border-radius: 1vw;
+
+  width: 35%;
+
+  padding: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  color: #fff;
+  background-image: url("./images/sydney-rae-668606-unsplash.jpg");
+  /* filter: brightness(85%); */
+  background-size: cover;
+  filter: drop-shadow(1.4vw);
+}
+
+.discountCard h1 {
+  font-size: 1.4vw;
+  text-align: center;
+  text-shadow: 0.1vw 0.1vw 0.1vw black;
+}
+
+.discountCard p {
+  font-size: 1vw;
+  text-align: center;
+  text-shadow: 0.1vw 0.1vw 0.1vw black;
+}
+
+ 
+
+.reviewcard img {
+  height: 3vw;
+  width: 3vw;
+}
+
+.featuredbrand {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featuredbrand-innerbox {
+  font-family: "Merriweather", serif;
+
+  padding: 4vw 0vw;
+  /* width: 60%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+
+footer {
+  width: 100%;
+  background-color: #001524;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid  #ffffffa8;
+}
+
+.footer-innerbox {
+  width: 60%;
+  display: flex;
+  gap: 1vw;
+  /* background-color: pink; */
+  padding: 5vw 0vw;
+}
+
+.footer-innerbox h2 {
+  color: white;
+  margin-bottom: 2vw;
+  font-family: "Merriweather", serif;
+}
+
+.footerbox1 {
+  width: 35%;
+  /* background-color: green; */
+  display: flex;
+  flex-direction: column;
+  padding: 0vw 1vw;
+  gap: 1vw;
+}
+
+.footerbox1 p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8vw;
+  font-style: italic;
+  font-weight: 500;
+  color: #ffffffa8;
+}
+
+.footerbox2 {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 4vw;
+  margin-left: 5vw;
+  font-size: 0.9vw;
+}
+
+.footerbox2-box1 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4vw;
+}
+
+.footerbox2-box1 a {
+  text-decoration: none;
+  color: #ffffffa8;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+}
+
+.footerbox2-box2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4vw;
+}
+
+.footerbox2-box2 a {
+  text-decoration: none;
+  color: #ffffffa8;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+}
+
+.footerbox2 a:hover{
+  color: #fff ;
+  transition: all ease 500ms;
+}
+
+.footerbox3 {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+  font-size: 0.9vw;
+}
+
+.footerbox3-box1 p {
+  font-family: "Poppins", sans-serif;
+  color: #ffffffa8;
+}
+
+.footerbox3-box2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4vw;
+}
+
+.footerbox3-box2 a {
+  text-decoration: none;
+   color: #6a9739;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+}
+.footerbox3-box2 a:hover{
+  color: #477714;
+  transition: all ease 500ms;
+}
+
+
+
+.footerbox3-box3{
+  display: flex;
+  gap: 1vw;
+}
+
+#store{
+  height: 2vw;
+}
+
+.copyright{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #001524;
+
+}
+
+.copyright-innerbox{
+  width: 60%;
+  /* background-color: black; */
+  padding: 3vw 0vw;
+  font-family: "Poppins", sans-serif;
+  color: #ffffffa8;
+  display: flex;justify-content: space-between;
+}
+
+.copyright-innerbox p{
+  font-size: 1vw;
+}
+
+.copyright-innerbox a{
+  text-decoration: none;
+  color: #ffffffa8;
+}
+
+#footer-icons{
+  display: flex;
+  gap: 1vw;
+}
