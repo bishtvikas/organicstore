@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw 2vw;
+  font-family: "Poppins", sans-serif;
+}
+
+.navigationbutton {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  display: flex;
+  gap: 1.5vw;
+}
+
+.navigationbutton a {
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 1vw;
+}
+
+.navigationbutton a:hover {
+  color: #6a9739;
+  transition: all ease 100ms;
+}
+
+#logo {
+  height: 4vw;
+}
+#total--cart {
+  display: flex;
+  gap: 0.5vw;
+  align-items: center;
+  color: #6a9739;
+}
+
+.active-btn {
+  color: #6a9739;
+}
+.non-active-btn {
+  color: black;
+}
+
+#hero {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  font-family: "Merriweather", serif;
+  padding: 6vw 0vw;
+  background-color: rgb(243, 243, 243);
+  /* background-color: red; */
+}
+
+.heroContainer {
+  display: flex;
+  /* justify-content: center; */
+  /* gap: 2vw; */
+  /* background-color: blue; */
+  width: 60%;
+}
+
+.heroContent {
+  /* border: 1px solid red; */
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+#heroHeadings {
+  margin-left: 3vw;
+}
+
+.heroContent h4 {
+  font-weight: bold;
+  font-size: 0.8vw;
+}
+.heroContent p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8vw;
+  font-weight: 100;
+}
+
+#heroMainImg {
+  width: 100%;
+}
+
+#heroHeading {
+  font-size: 3vw;
+}
+
+#leafimg {
+  width: 3vw;
+  margin-top: 2vw;
+}
+
+.shopnowbtn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 1vw;
+  width: 10vw;
+  border-radius: 0.2vw;
+  background-color: #6a9739;
+   color: #fff;
+  text-transform: uppercase;
+  border: none;
+  font-size: 1vw;
+}
+
+.banner {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 2vw 1vw;
+}
+
+.bannercontainer {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  gap: 0.5vw;
+}
+
+.banner-cards {
+  border-radius: 0.2vw;
+  padding: 1vw;
+  display: flex;
+  gap: 0.3vw;
+  background-color: #333333;
+  width: 17vw;
+  color: #fff;
+}
+
+.banner-cards i {
+  color: #6a9739;
+  font-size: 2vw;
+}
+
+.banner-cards h3 {
+  font-family: "Merriweather", serif;
+  letter-spacing: 1px;
+  font-weight: 900;
+  font-size: 1vw;
+}
+
+.banner-cards p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-size: 0.8vw;
+}
+
+.bestsellingproducts {
+    /* background-color: red; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5vw;
+}
+.bestsellingproductscontainer h1 {
+  font-family: "Merriweather", serif;
+  font-size: 2vw;
+}
+#leafimg2 {
+  margin: 1vw 0 3vw 0;
+  height: 1.5vw;
+}
+
+.bestsellingproductscontainer {
+  /* background-color: blue; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bestsellingproductscards {
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: center;
+  gap: 0.6vw;
+}
+
+.card {
+  /* background-color: green; */
+  width: 14vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3vw;
+}
+
+.card img {
+  width: 14vw;
+}
+
+.card h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-size: 0.8vw;
+}
+
+.card a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 0.8vw;
+  text-decoration: none;
+  color: black;
+}
+
+.farm-fresh-card-container {
+  background-color: rgb(243, 243, 243);
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  padding: 5vw;
+}
+
+.farm-cards {
+  background-color: #fff;
+  height: 20vw;
+  
+  /* border: 1px solid black; */
+    width: 18vw;
+  border-radius: 0.4vw;
+  display: flex;
+  flex-direction: column;
+  /* gap: 2vw; */
+  padding: 1vw;
+}
+
+
+#farm-card-1{
+    background-image: url("./images/farm1.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+#farm-card-2{
+    background-image: url("./images/farm2.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+#farm-card-3{
+    background-image: url("./images/farm3.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+.farm-heading {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8vw;
+}
+
+.farm-heading h1 {
+  font-family: "Merriweather", serif;
+  font-size: 1.5vw;
+}
+
+.farm-heading p {
+  font-family: "Poppins", sans-serif;
+  font-size: .8vw;
+}
+
+.farm-heading h1::selection {
+    background-color: #9ede58;
+  }
+
+.farm-heading p::selection {
+    background-color: #9ede58;
+  }
+
+.farm-cards button{
+    margin-top: 1vw;
+}
+
+.farm-cards button:hover{
+    background-color: #9ede58;
+    cursor: pointer;
+    transition: all ease 500ms;
+}
+
+ 
