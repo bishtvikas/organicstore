@@ -624,3 +624,7 @@ footer {
   display: flex;
   gap: 1vw;
 }
+
+#footer-icons a:hover{
+  color: #79a747;
+}
