@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -29,13 +29,203 @@
         <a href="#about" class="non-active-btn">About</a>
         <a href="#contact" class="non-active-btn">Contact</a>
         <a id="total--cart" href="#">
-            <span>
-                <i class="ri-money-dollar-circle-fill"></i>
-                200
-            </span>
+          <span>
+            <i class="ri-money-dollar-circle-fill"></i>
+            200
+          </span>
           <i class="ri-shopping-cart-fill"></i>
         </a>
       </div>
     </nav>
+
+    <main>
+      <div class="mainContainer">
+        <div class="mainContainer-box1">
+          <span class="searchinput--button">
+            <input
+              type="text"
+              id="search-product"
+              placeholder="Search products..."
+            />
+            <button id="search-btn">
+              <i class="ri-arrow-right-s-line"></i>
+            </button>
+          </span>
+
+          <h1 id="filterbypriceheading">Filter by price</h1>
+          <input type="range" min="10" max="100" id="priceslider" /><br />
+          <div class="priceboxes">
+            <input class="pricebox" value="10" placeholder="$" />
+            <input class="pricebox" type="currency" value="40" />
+          </div>
+
+          <h2>Groceries <span class="quantity">(10)</span></h2>
+          <h2>Juice <span class="quantity">(9)</span></h2>
+
+          <div class="everything-cards-container">
+            <div class="everything-card">
+              <img src="./images/card4.jpg" alt="" />
+              <h2>Natural Extracted Edible Oil</h2>
+              <p><del>$34.00</del> $25.00</p>
+            </div>
+
+            <div class="everything-card">
+              <img src="./images/card2.jpg" alt="" />
+              <h2>Natural Extracted Edible Oil</h2>
+              <p><del>$34.00</del> $25.00</p>
+            </div>
+
+            <div class="everything-card">
+              <img src="./images/wheat-300x300.jpg" alt="" />
+              <h2>Natural Extracted Edible Oil</h2>
+              <p><del>$34.00</del> $25.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="mainContainer-box2">
+          <a href="">Home</a> / Shop
+          <h1>shop</h1>
+          <div class="result-sorting">
+            <p>Showing 1-9 of 12 results</p>
+           <select name="sorting" id="">
+            <option value="0">Default sorting</option>
+            <option value="1">Sort by popularity</option>
+            <option value="2">Sort by average rating</option>
+            <option value="3">Sort by latest</option>
+            <option value="4">Sort by price : low to high</option>
+            <option value="5">Sort by price : high to low</option>
+             
+           </select>
+          </div>
+          
+          <section class="everthing-product-list">
+            <div class="everything-hero-card">
+              <img src="./images/card3.jpg" alt="" />
+                  <h6>Groceries</h6>
+                  <a href="">Handpicked Red Chillies</a>
+                  <span>
+                    <i class="ri-star-line"></i>
+                    <i class="ri-star-line"></i>
+                    <i class="ri-star-line"></i>
+                    <i class="ri-star-line"></i>
+                    <i class="ri-star-line"></i>
+                  </span>
+                  <i class="ri-money-dollar-circle-fill">42.00</i>
+            </div>
+
+            <div class="everything-hero-card">
+              <img src="./images/card3.jpg" alt="" />
+                  <h6>Groceries</h6>
+                  <a href="">Handpicked Red Chillies</a>
+                  <span>
+                    <i class="ri-star-line"></i>
+                    <i class="ri-star-line"></i>
+                    <i class="ri-star-line"></i>
+                    <i class="ri-star-line"></i>
+                    <i class="ri-star-line"></i>
+                  </span>
+                  <i class="ri-money-dollar-circle-fill">42.00</i>
+            </div>
+
+            <div class="everything-hero-card">
+              <img src="./images/card3.jpg" alt="" />
+                  <h6>Groceries</h6>
+                  <a href="">Handpicked Red Chillies</a>
+                  <span>
+                    <i class="ri-star-line"></i>
+                    <i class="ri-star-line"></i>
+                    <i class="ri-star-line"></i>
+                    <i class="ri-star-line"></i>
+                    <i class="ri-star-line"></i>
+                  </span>
+                  <i class="ri-money-dollar-circle-fill">42.00</i>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <span class="footer-innerbox">
+        <span class="footerbox1">
+          <a href="index.html"
+            ><img
+              id="logo"
+              src="./images/organic-store-white-logo.png"
+              alt="Logo"
+          /></a>
+
+          <p>
+            Maecenas mi justo, interdum at consectetur vel, tristique et arcu.
+            Ut quis eros blandit, ultrices diam in, elementum ex. Suspendisse
+            quis faucibus urna. Suspendisse pellentesque.
+          </p>
+        </span>
+
+        <span class="footerbox2">
+          <span class="footerbox2-box1">
+            <h2>Quick Links</h2>
+            <a href="about">about</a>
+            <a href="cart">cart</a>
+            <a href="checkout">checkout</a>
+            <a href="contact">contact</a>
+            <a href="home">home</a>
+            <a href="my account">my account</a>
+            <a href="shop">shop</a>
+          </span>
+
+          <span class="footerbox2-box2">
+            <h2>Site Links</h2>
+            <a href="privacy policy">privacy policy</a>
+            <a href="shipping details">shipping details</a>
+            <a href="offers coupons">offers coupons</a>
+            <a href="terms & condition">terms & condition</a>
+          </span>
+        </span>
+
+        <span class="footerbox3">
+          <span class="footerbox3-box1">
+            <h2>Download our mobile app</h2>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              aliquam gravida sollicitudin. Praesent porta enim mi, non
+              tincidunt libero interdum sit amet.
+            </p>
+          </span>
+          <span class="footerbox3-box2">
+            <h2>Quick Links</h2>
+            <a href="know more about us">know more about us</a>
+            <a href="visit store">visit store</a>
+            <a href="let's connect">let's connect</a>
+            <a href="locate stores">locate stores</a>
+          </span>
+
+          <span class="footerbox3-box3">
+            <a href="#"
+              ><img id="store" src="./images/play-store.png" alt="Logo"
+            /></a>
+            <a href="#"
+              ><img id="store" src="./images/app-store.png" alt="Logo"
+            /></a>
+          </span>
+        </span>
+      </span>
+    </footer>
+
+    <section class="copyright">
+      <div class="copyright-innerbox">
+        <span>
+          <p>Copyright &copy 2023 | Organic Store</p>
+        </span>
+        <span id="footer-icons">
+          <a href=""><i class="ri-linkedin-fill"></i></a>
+          <a href=""><i class="ri-instagram-fill"></i></a>
+          <a href=""><i class="ri-github-fill"></i></a>
+          <a href=""><i class="ri-facebook-circle-fill"></i></a>
+        </span>
+      </div>
+    </section>
   </body>
 </html>
