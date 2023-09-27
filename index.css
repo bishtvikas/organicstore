@@ -4,6 +4,18 @@
   box-sizing: border-box;
 }
 
+.merii-font{
+  font-family: "Merriweather", serif;
+}
+
+.poppins-font{
+  font-family: "Poppins", sans-serif;
+}
+
+.light--green{
+  color: #8bc74b;;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -628,7 +640,8 @@ main {
 }
 
 .mainContainer {
-  width: 60%;
+  /* border: 10px solid black; */
+  width: 70%;
   display: flex;
   padding: 3vw 0vw;
 }
@@ -754,34 +767,88 @@ font-size: .8vw;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .mainContainer-box2 {
-  padding: 0vw 2vw;
+  padding: 0vw 3vw;
   
 
 }
+
+
+.everything-home{
+  font-size: .8vw;
+  text-decoration: none;
+  display: inline;
+  color: #12030389;
+}
+.everything-Shop{
+  font-size: .8vw;
+  display: inline;
+  color: #12030389;
+}
+
+.everything-shop-h1{
+  margin-top: 1vw;
+  font-size: 3vw;
+}
+
+.result-sorting{
+  margin-top: 3vw;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #120303af;
+
+}
+
+.everthing-options{
+  font-size: .8vw;
+padding: .5vw;
+color: #120303af;
+border: none;
+background-color: transparent;
+
+}
+
+
+.everything-main-products{
+  margin-top: 1vw;
+  display: flex;
+  gap: 1vw;
+  /* border: 1px solid black; */
+  flex-wrap: wrap;
+}
+
+.everything-pages-button{
+  /* border: 1px solid black; */
+  margin-top: 2vw;
+  display: flex;
+  gap: .3vw;
+}
+
+.pagination{
+  width: 2.2vw;
+  height: 2.2vw;
+  
+}
+
+.page-activate{
+  background-color: #8bc74b;
+  color: white;
+  border: none;
+}
+ 
+.page-deactivate{
+  background-color:  white;
+  color: #8bc74b;
+  border: 1px solid #8bc74b;
+}
+
+.page-deactivate:hover{
+  background-color: #8bc74b;
+  color: white;
+  border: none;
+  transition: all ease 1s;
+}
+ 
+ 

@@ -21,31 +21,235 @@
         <a href="index.html"
           ><img id="logo" src="./images/organic-store-logo5.svg" alt="Logo"
         /></a>
-        <a href="everything.html">Everthing</a>
+        <a href="everything.html" class="non-active-btn">Everthing</a>
         <a href="groceries.html" class="non-active-btn">Groceries</a>
-        <a href="juice.html" class="active-btn">Juice</a>
+        <a href="juice.html" class=" active-btn">Juice</a>
       </div>
       <div class="navigationbutton">
         <a href="#about" class="non-active-btn">About</a>
         <a href="#contact" class="non-active-btn">Contact</a>
         <a id="total--cart" href="#">
-            <span>
-                <i class="ri-money-dollar-circle-fill"></i>
-                200
-            </span>
+          <span>
+            <i class="ri-money-dollar-circle-fill"></i>
+            200
+          </span>
           <i class="ri-shopping-cart-fill"></i>
         </a>
       </div>
     </nav>
-  
-  
-  
-  
+
+    <main>
+      <div class="mainContainer">
+        <div class="mainContainer-box1">
+          <span class="searchinput--button">
+            <input
+              type="text"
+              id="search-product"
+              placeholder="Search products..."
+            />
+            <button id="search-btn">
+              <i class="ri-arrow-right-s-line"></i>
+            </button>
+          </span>
+
+          <h1 id="filterbypriceheading">Filter by price</h1>
+          <input type="range" min="10" max="100" id="priceslider" /><br />
+          <div class="priceboxes">
+            <input class="pricebox" value="10" placeholder="$" />
+            <input class="pricebox" type="currency" value="40" />
+          </div>
+
+          <h2>Groceries <span class="quantity">(10)</span></h2>
+          <h2>Juice <span class="quantity">(9)</span></h2>
+
+          <div class="everything-cards-container">
+            <div class="everything-card">
+              <img src="./images/card4.jpg" alt="" />
+              <h2>Natural Extracted Edible Oil</h2>
+              <p><del>$34.00</del> $25.00</p>
+            </div>
+
+            <div class="everything-card">
+              <img src="./images/card2.jpg" alt="" />
+              <h2>Natural Extracted Edible Oil</h2>
+              <p><del>$34.00</del> $25.00</p>
+            </div>
+
+            <div class="everything-card">
+              <img src="./images/wheat-300x300.jpg" alt="" />
+              <h2>Natural Extracted Edible Oil</h2>
+              <p><del>$34.00</del> $25.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="mainContainer-box2">
+          <a href="" class="poppins-font everything-home">Home </a>
+          <p class="poppins-font everything-Shop">/ Juice</p>
+          <h1 class="merii-font light--green everything-shop-h1">Juice</h1>
+          <div class="result-sorting">
+            <p class="poppins-font">Showing 1-9 of 12 results</p>
+           <select name="sorting" id="" class="poppins-font everthing-options">
+            <option value="0">Default sorting</option>
+            <option value="1">Sort by popularity</option>
+            <option value="2">Sort by average rating</option>
+            <option value="3">Sort by latest</option>
+            <option value="4">Sort by price : low to high</option>
+            <option value="5">Sort by price : high to low</option>
+             
+           </select>
+          </div>
+          
+          <section class="everything-main-products">
+            <span class="card">
+              <img src="./images/card1.jpg" alt="" />
+              <h6>Groceries</h6>
+              <a href="">Assorted Coffee</a>
+              <span>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+              </span>
+              <i class="ri-money-dollar-circle-fill">20.00</i>
+            </span>
+
+            <span class="card">
+              <img src="./images/2.jpg" alt="" />
+              <h6>Groceries</h6>
+              <a href="">Assorted Coffee</a>
+              <span>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+              </span>
+              <i class="ri-money-dollar-circle-fill">20.00</i>
+            </span>
+
+            <span class="card">
+              <img src="./images/3.jpg" alt="" />
+              <h6>Groceries</h6>
+              <a href="">Assorted Coffee</a>
+              <span>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+              </span>
+              <i class="ri-money-dollar-circle-fill">20.00</i>
+            </span>
+
+            <span class="card">
+              <img src="./images/4.jpg" alt="" />
+              <h6>Groceries</h6>
+              <a href="">Assorted Coffee</a>
+              <span>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+              </span>
+              <i class="ri-money-dollar-circle-fill">20.00</i>
+            </span>
+
+            <span class="card">
+              <img src="./images/5.jpg" alt="" />
+              <h6>Groceries</h6>
+              <a href="">Assorted Coffee</a>
+              <span>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+              </span>
+              <i class="ri-money-dollar-circle-fill">20.00</i>
+            </span>
+
+            <span class="card">
+              <img src="./images/6.jpg" alt="" />
+              <h6>Groceries</h6>
+              <a href="">Assorted Coffee</a>
+              <span>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+              </span>
+              <i class="ri-money-dollar-circle-fill">20.00</i>
+            </span>
+
+            <span class="card">
+              <img src="./images/card2.jpg" alt="" />
+              <h6>Groceries</h6>
+              <a href="">Assorted Coffee</a>
+              <span>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+              </span>
+              <i class="ri-money-dollar-circle-fill">20.00</i>
+            </span>
+
+            <span class="card">
+              <img src="./images/card3.jpg" alt="" />
+              <h6>Groceries</h6>
+              <a href="">Assorted Coffee</a>
+              <span>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+              </span>
+              <i class="ri-money-dollar-circle-fill">20.00</i>
+            </span>
+
+            <span class="card">
+              <img src="./images/card4.jpg" alt="" />
+              <h6>Groceries</h6>
+              <a href="">Assorted Coffee</a>
+              <span>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i>
+              </span>
+              <i class="ri-money-dollar-circle-fill">20.00</i>
+            </span>
+
+          </section>
+          
+          <section class="everything-pages-button">
+            <button class="pagination page-activate">1</button>
+            <button class="pagination page-deactivate">2</button>
+            <button class="pagination page-deactivate">
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </section>
+
+          
+
+        </div>
+      </div>
+    </main>
+
     <footer>
       <span class="footer-innerbox">
         <span class="footerbox1">
           <a href="index.html"
-            ><img id="logo" src="./images/organic-store-white-logo.png" alt="Logo"
+            ><img
+              id="logo"
+              src="./images/organic-store-white-logo.png"
+              alt="Logo"
           /></a>
 
           <p>
@@ -82,8 +286,8 @@
 
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              aliquam gravida sollicitudin. Praesent porta enim mi, non tincidunt
-              libero interdum sit amet.
+              aliquam gravida sollicitudin. Praesent porta enim mi, non
+              tincidunt libero interdum sit amet.
             </p>
           </span>
           <span class="footerbox3-box2">
@@ -96,30 +300,28 @@
 
           <span class="footerbox3-box3">
             <a href="#"
-            ><img id="store" src="./images/play-store.png" alt="Logo"
-          /></a>
-          <a href="#"
-            ><img id="store" src="./images/app-store.png" alt="Logo"
-          /></a>
+              ><img id="store" src="./images/play-store.png" alt="Logo"
+            /></a>
+            <a href="#"
+              ><img id="store" src="./images/app-store.png" alt="Logo"
+            /></a>
           </span>
-          
         </span>
       </span>
     </footer>
 
     <section class="copyright">
       <div class="copyright-innerbox">
-      <span>
-        <p>Copyright &copy 2023 | Organic Store</p>
-      </span>
-      <span id="footer-icons">
-        <a href=""><i class="ri-linkedin-fill"></i></a>
-        <a href=""><i class="ri-instagram-fill"></i></a>
-        <a href=""><i class="ri-github-fill"></i></a>
-        <a href=""><i class="ri-facebook-circle-fill"></i></a>
-        
-      </span>
-    </div>
+        <span>
+          <p>Copyright &copy 2023 | Organic Store</p>
+        </span>
+        <span id="footer-icons">
+          <a href=""><i class="ri-linkedin-fill"></i></a>
+          <a href=""><i class="ri-instagram-fill"></i></a>
+          <a href=""><i class="ri-github-fill"></i></a>
+          <a href=""><i class="ri-facebook-circle-fill"></i></a>
+        </span>
+      </div>
     </section>
   </body>
 </html>
