@@ -14,14 +14,16 @@
       href="https://fonts.googleapis.com/css2?family=Merriweather&family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
     />
+
+    <!-- font-family: 'Merriweather', serif; -->
   </head>
-  <body>
+  <body >
     <nav>
       <div class="navigationbutton">
         <a href="index.html"
           ><img id="logo" src="./images/organic-store-logo5.svg" alt="Logo"
         /></a>
-        <a href="everything.html" class="active-btn">Everthing</a>
+        <a href="everything.html" class="non-active-btn">Everthing</a>
         <a href="groceries.html" class="non-active-btn">Groceries</a>
         <a href="juice.html" class="non-active-btn">Juice</a>
       </div>
@@ -30,17 +32,13 @@
         <a href="#contact" class="non-active-btn">Contact</a>
         <a id="total--cart" href="#">
           <span>
-            <i class="ri-money-dollar-circle-fill "></i>
+            <i class="ri-money-dollar-circle-fill"></i>
             200
           </span>
-          <div class="cartBtnNotfication">
-            <i class="ri-shopping-cart-fill sidebarBtn "></i>
-            <!-- insert paragrapth tag dynamically -->
-          </div>
+          <i class="ri-shopping-cart-fill sidebarBtn"></i>
         </a>
       </div>
     </nav>
-
 
     <section class="sidebar">
       <div class="sidebar-container">
@@ -49,102 +47,76 @@
           <i class="ri-close-fill sidebarClosebtn"></i><br /><br />
         </div>
 
-           <div class="cartHeader merii-font">
-            <span>Item</span>
-            <span>Name</span>
-            <span>Unit Price</span>
-            <span>Unit</span>
-            
-          </div>
-           <div class="mainCartContent">
-                      <!-- insert content dynamically -->
-
-              
-          </div>
-          <button class="continueShoppingBtn">CONTINUE SHOPPING</button>
-
+        <button>CONTINUE SHOPPING</button>
+      </div>
     </section>
 
+    <section class="product-page-main" >
+      <!-- will be created dynamically using index.js -->
 
-    <main>
-      <div class="mainContainer">
-        <div class="mainContainer-box1">
-          <span class="searchinput--button">
-            <input
-              type="text"
-              id="search-product"
-              placeholder="Search products..."
-            />
-            <button id="search-btn">
-              <i class="ri-arrow-right-s-line"></i>
-            </button>
+      <div class="product-desc poppins-font">
+        <a href="#">Description</a>
+        <a href="#">Reviews (0)</a>
+        <p>
+          Neque porro quisquam est, qui dolore ipsum quia dolor sit amet,
+          consectetur adipisci velit, sed quia non incidunt lores ta porro ame.
+          numquam eius modi tempora incidunt lores ta porro ame.
+        </p>
+      </div>
+
+      <div class="related-products">
+        <h1 class="merii-font">Related products</h1>
+        <br>
+        <div class="related-products-card-container">
+         
+
+        <span class="related-products-card">
+            <img src="./images/5.jpg" alt="" />
+            <h4 class="poppins-font">Juice</h4>
+            <a href="" class="merii-font">Fresh Orange Juice</a>
+            <span>
+              <i class="ri-star-line"></i>
+              <i class="ri-star-line"></i>
+              <i class="ri-star-line"></i>
+              <i class="ri-star-line"></i>
+              <i class="ri-star-line"></i>
+            </span>
+            <i class="ri-money-dollar-circle-fill">20.00</i>
           </span>
 
-          <h1 id="filterbypriceheading">Filter by price</h1>
-          <input type="range" min="10" max="100" id="priceslider" /><br />
-          <div class="priceboxes">
-            <input class="pricebox" value="10" placeholder="$" />
-            <input class="pricebox" type="currency" value="40" />
-          </div>
+          <span class="related-products-card">
+            <img src="./images/5.jpg" alt="" />
+            <h4 class="poppins-font">Juice</h4>
+            <a href="" class="merii-font">Fresh Orange Juice</a>
+            <span>
+              <i class="ri-star-line"></i>
+              <i class="ri-star-line"></i>
+              <i class="ri-star-line"></i>
+              <i class="ri-star-line"></i>
+              <i class="ri-star-line"></i>
+            </span>
+            <i class="ri-money-dollar-circle-fill">20.00</i>
+          </span>
 
-          <h2>Groceries <span class="quantity">(10)</span></h2>
-          <h2>Juice <span class="quantity">(9)</span></h2>
-
-          <div class="everything-cards-container">
-            <div class="everything-card">
-              <img src="./images/card4.jpg" alt="" />
-              <h2>Natural Extracted Edible Oil</h2>
-              <p><del>$34.00</del> $25.00</p>
-            </div>
-
-            <div class="everything-card">
-              <img src="./images/card2.jpg" alt="" />
-              <h2>Natural Extracted Edible Oil</h2>
-              <p><del>$34.00</del> $25.00</p>
-            </div>
-
-            <div class="everything-card">
-              <img src="./images/wheat-300x300.jpg" alt="" />
-              <h2>Natural Extracted Edible Oil</h2>
-              <p><del>$34.00</del> $25.00</p>
-            </div>
-          </div>
+          <span class="related-products-card">
+            <img src="./images/5.jpg" alt="" />
+            <h4 class="poppins-font">Juice</h4>
+            <a href="" class="merii-font">Fresh Orange Juice</a>
+            <span>
+              <i class="ri-star-line"></i>
+              <i class="ri-star-line"></i>
+              <i class="ri-star-line"></i>
+              <i class="ri-star-line"></i>
+              <i class="ri-star-line"></i>
+            </span>
+            <i class="ri-money-dollar-circle-fill">20.00</i>
+          </span>
+          
+         
         </div>
-        <div class="mainContainer-box2">
-          <a href="" class="poppins-font everything-home">Home </a>
-          <p class="poppins-font everything-Shop">/ Shop</p>
-          <h1 class="merii-font light--green everything-shop-h1">shop</h1>
-          <div class="result-sorting">
-            <p class="poppins-font">Showing 1-9 of 12 results</p>
-           <select name="sorting" id="" class="poppins-font everthing-options">
-            <option value="0">Default sorting</option>
-            <option value="1">Sort by popularity</option>
-            <option value="2">Sort by average rating</option>
-            <option value="3">Sort by latest</option>
-            <option value="4">Sort by price : low to high</option>
-            <option value="5">Sort by price : high to low</option>
-             
-           </select>
-          </div>
-          
-          <section class="everything-main-products">
-<!-- ! Cards will populate dynamically using index.js -->
 
-          </section>
-          
-          <section class="everything-pages-button">
-            <button class="pagination page-activate">1</button>
-            <button class="pagination page-deactivate">2</button>
-            <button class="pagination page-deactivate">
-              <i class="ri-arrow-right-line"></i>
-            </button>
-          </section>
-
-          
-
-        </div>
       </div>
-    </main>
+    </section>
 
     <footer>
       <span class="footer-innerbox">
@@ -229,6 +201,5 @@
     </section>
 
     <script src="./index.js"></script>
-
   </body>
 </html>
