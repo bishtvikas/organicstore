@@ -17,7 +17,7 @@
 
     <!-- font-family: 'Merriweather', serif; -->
   </head>
-  <body>
+  <body >
     <nav>
       <div class="navigationbutton">
         <a href="index.html"
@@ -36,7 +36,7 @@
             200
           </span>
           <div class="cartBtnNotfication">
-            <i class="ri-shopping-cart-fill sidebarBtn "></i>
+            <i class="ri-shopping-cart-fill sidebarBtn"></i>
             <!-- insert paragrapth tag dynamically -->
           </div>
         </a>
@@ -44,26 +44,25 @@
     </nav>
 
     <section class="sidebar">
-      <div class="sidebar-container">
+      <div class="sidebar-container" id="sidebarcontain">
         <div class="sidebar-header">
           <h2 class="poppins-font">Shopping Cart</h2>
           <i class="ri-close-fill sidebarClosebtn"></i><br /><br />
         </div>
 
-           <div class="cartHeader merii-font">
-            <span>Item</span>
-            <span>Name</span>
-            <span>Unit Price</span>
-            <span>Unit</span>
-            
-          </div>
-           <div class="mainCartContent">
-                      <!-- insert content dynamically -->
-
-              
-          </div>
-          <button class="continueShoppingBtn">CONTINUE SHOPPING</button>
-
+        <div class="cartHeader merii-font">
+          <span>Item</span>
+          <span>Name</span>
+          <span>Unit Price</span>
+          <span>Unit</span>
+        </div>
+        <div class="mainCartContent">
+          <!-- insert content dynamically -->
+        
+           
+        </div>
+        <button class="continueShoppingBtn">CONTINUE SHOPPING</button>
+      </div>
     </section>
 
     <section id="hero">
@@ -128,74 +127,7 @@
         <h1>Best Selling Products</h1>
         <img id="leafimg2" src="./images/logo-leaf-new.png" alt="leafimg" />
         <div class="bestsellingproductscards">
-          <!-- <span class="card">
-            <div class="likeandaddcart">
-              <i class="ri-heart-fill productlikeBtn"></i>
-              <i class="ri-shopping-cart-fill addtocarticonBtn"></i>
-            </div>
-            <img src="./images/card1.jpg" alt="" />
-            <h6>Groceries</h6>
-            <a href="">Assorted Coffee</a>
-            <span>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-            </span>
-            <i class="ri-money-dollar-circle-fill">20.00</i>
-          </span>
-          <span class="card">
-            <div class="likeandaddcart">
-              <i class="ri-heart-fill productlikeBtn"></i>
-              <i class="ri-shopping-cart-fill addtocarticonBtn"></i>
-            </div>
-            <img src="./images/card2.jpg" alt="" />
-            <h6>Groceries</h6>
-            <a href="">Hand Sanitizer</a>
-            <span>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-            </span>
-            <i class="ri-money-dollar-circle-fill">50.00</i>
-          </span>
-          <span class="card">
-            <div class="likeandaddcart">
-              <i class="ri-heart-fill productlikeBtn"></i>
-              <i class="ri-shopping-cart-fill addtocarticonBtn"></i>
-            </div>
-            <img src="./images/card3.jpg" alt="" />
-            <h6>Groceries</h6>
-            <a href="">Handpicked Red Chillies</a>
-            <span>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-            </span>
-            <i class="ri-money-dollar-circle-fill">42.00</i>
-          </span>
-          <span class="card">
-            <div class="likeandaddcart">
-              <i class="ri-heart-fill productlikeBtn"></i>
-              <i class="ri-shopping-cart-fill addtocarticonBtn"></i>
-            </div>
-            <img src="./images/card4.jpg" alt="" />
-            <h6>Groceries</h6>
-            <a href="">Natural Extracted Edible Oil</a>
-            <span>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-            </span>
-            <i class="ri-money-dollar-circle-fill">35.00</i>
-          </span> -->
+           
         </div>
       </div>
     </section>
@@ -253,79 +185,7 @@
         <h1>Trending Products</h1>
         <img id="leafimg2" src="./images/logo-leaf-new.png" alt="leafimg" />
         <div class="trendingproductscards">
-          <i
-            class="ri-shopping-cart-fill addtocarticonBtn"
-            onclick="addtocart(index)"
-          ></i>
-
-          <!-- <span class="card">
-            <div class="likeandaddcart">
-              <i class="ri-heart-fill productlikeBtn"></i>
-              <i class="ri-shopping-cart-fill addtocarticonBtn"></i>
-            </div>
-            <img src="./images/card1.jpg" alt="" />
-            <h6>Groceries</h6>
-            <a href="">Assorted Coffee</a>
-            <span>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-            </span>
-            <i class="ri-money-dollar-circle-fill">20.00</i>
-          </span>
-          <span class="card">
-            <div class="likeandaddcart">
-              <i class="ri-heart-fill productlikeBtn"></i>
-              <i class="ri-shopping-cart-fill addtocarticonBtn"></i>
-            </div>
-            <img src="./images/card2.jpg" alt="" />
-            <h6>Groceries</h6>
-            <a href="">Hand Sanitizer</a>
-            <span>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-            </span>
-            <i class="ri-money-dollar-circle-fill">50.00</i>
-          </span>
-          <span class="card">
-            <div class="likeandaddcart">
-              <i class="ri-heart-fill productlikeBtn"></i>
-              <i class="ri-shopping-cart-fill addtocarticonBtn"></i>
-            </div>
-            <img src="./images/card3.jpg" alt="" />
-            <h6>Groceries</h6>
-            <a href="">Handpicked Red Chillies</a>
-            <span>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-            </span>
-            <i class="ri-money-dollar-circle-fill">42.00</i>
-          </span>
-          <span class="card">
-            <div class="likeandaddcart">
-              <i class="ri-heart-fill productlikeBtn"></i>
-              <i class="ri-shopping-cart-fill addtocarticonBtn"></i>
-            </div>
-            <img src="./images/card4.jpg" alt="" />
-            <h6>Groceries</h6>
-            <a href="">Natural Extracted Edible Oil</a>
-            <span>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-              <i class="ri-star-line"></i>
-            </span>
-            <i class="ri-money-dollar-circle-fill">35.00</i>
-          </span> -->
+          
         </div>
       </div>
     </section>
