@@ -1,6 +1,5 @@
 const body = document.getElementsByTagName("body");
 const cartBtnNotfication = document.querySelector(".cartBtnNotfication");
-const cartList = [];
 const mainCartContent = document.querySelector(".mainCartContent");
 const everything_main_products = document.querySelector(
   ".everything-main-products"
@@ -15,6 +14,7 @@ const sidebar = document.querySelector(".sidebar");
 const sidebarClosebtn = document.querySelector(".sidebarClosebtn");
 const sidebar_container = document.querySelector(".sidebar-container");
 const RemoveItemBtn = document.getElementsByClassName("RemoveItemBtn");
+const cartList = [];
 let productDetailsInCart = [];
 
 let productDetails = [
@@ -119,6 +119,27 @@ let productDetails = [
   },
 ];
 
+// ! calling function to set the price in total
+function setTotalPrice() {
+  console.log("setTotalPrice triggerd");
+  let eachItemPrice = 0;
+  let totalPrice = 0;
+
+  // ! function to calculate total price
+  productDetailsInCart.forEach((item, index) => {
+    eachItemPrice = item.quantity * item.price;
+
+    totalPrice += eachItemPrice;
+  });
+
+  let totalpricediv = document.createElement("div");
+  let totalPriceData = `<h1 class="merii-font">Total $${totalPrice}</h1>`;
+  totalpricediv.insertAdjacentHTML("afterbegin", totalPriceData);
+
+  //  sidebar_container.appendChild(totalpricediv);
+  mainCartContent.appendChild(totalpricediv);
+}
+
 // *******************************************************************
 
 function renderTrendingProduct(index) {
@@ -147,22 +168,44 @@ function renderTrendingProduct(index) {
   document.body.querySelector(".trendingproductscards").appendChild(cardSpan);
 }
 
- 
+function deleteItem(event) {
+  let productDetailsInCart_NAME = event.target.dataset.itemname;
+  let productDetailsInCart_ID; // to remove from carproductDetailsInCart array
+  let productDetails_ID; // to remove from cartlist array
+  //now we need to remove that product from productDetailsinCart as well as cartList
 
- 
- function deleteItem(index , id){
+  productDetails.forEach((productDetailsitem) => {
+    if (productDetailsInCart_NAME == productDetailsitem.name) {
+      productDetails_ID = productDetailsitem.id;
+    }
+  });
 
-  
-console.log("before deleting productDetailsInCart:", productDetailsInCart)
- 
-console.log("before deleting cartList:" , cartList)
+  productDetailsInCart.forEach((item, index) => {
+    if (productDetailsInCart_NAME == item.name) {
+      productDetailsInCart_ID = index;
+    }
+  });
 
   // ! for CRUD operation in JS ARRAYS, splice is the best method
   // !syntax = array.splice(index_where_pointer_will_be , count_of_delete , New_data_to_update)
-  console.log(`  deleting at ${index}... `)
-  console.log(`  deleting at ${id}... `)
- 
-  productDetailsInCart.splice(index,1);
+  // console.log("productDetailsInCart before deleting");
+  // console.log(productDetailsInCart);
+
+  productDetailsInCart.splice(productDetailsInCart_ID, 1);
+
+  // console.log("productDetailsInCart after deleting");
+  // console.log(productDetailsInCart);
+
+  // cartList.indexOf(productDetails_ID);
+  // console.log("cartList before deleting");
+  // console.log(cartList);
+  // console.log(cartList.indexOf(productDetails_ID));
+
+  cartList.splice(productDetailsInCart_ID, 1);
+
+  //   console.log("cartList after deleting");
+  // console.log(cartList);
+  // console.log(cartList.indexOf(productDetails_ID));
 
   // ! Rendering prodcuctDetailsInCart array to show all cart elements
   mainCartContent.innerHTML = "";
@@ -174,40 +217,36 @@ console.log("before deleting cartList:" , cartList)
     cartData.innerHTML += `
 
     <img src="${productDetailsInCart[index].img}"></img>
-    <span>coffee</span>
+    <span>${productDetailsInCart[index].name}</span>
     <span class="unitprice">$${productDetailsInCart[index].price}</span>
     <span class="unit">${productDetailsInCart[index].quantity}</span>
-    <button class="RemoveItemBtn" onclick = "deleteItem(${index})">Remove</button>`;
+    <button class="RemoveItemBtn" data-itemname = ${productDetailsInCart[index].name} data-itemid = "${index}"
+    
+    onclick = "deleteItem(event)">Remove</button>`;
 
     document.querySelector(".mainCartContent").appendChild(cartData);
   });
 
-
- 
-   
- }
- 
+  setTotalPrice();
+}
 
 function addtocart(id) {
- 
-// ! cartlist is an array, which will hold only the ids of the card clicked by user.
-// ! productDetails is an array of objects, which will hold the object/details of the id's present in cartList array.
+  // ! cartlist is an array, which will hold only the ids of the card clicked by user.
+  // ! productDetails is an array of objects, which will hold the object/details of the id's present in cartList array.
 
+  // ! addtocart() will be invoked as part of onclick function , mentioned in embedded HTML in createCard() function.
 
-// ! addtocart() will be invoked as part of onclick function , mentioned in embedded HTML in createCard() function. 
+  // ! Logic : if cartList array is empty then simply add that card ID into cartList array.
+  // ! also add that ids detail/object into productDetails array.
 
+  // ! if cartList array is not empty , then traverse through cartlist array and find if the clicked card's id
+  // ! already present in carList array or not.
 
-// ! Logic : if cartList array is empty then simply add that card ID into cartList array.
-// ! also add that ids detail/object into productDetails array.
+  // ! if the clicked card's id is not already present then add it to cartList array.
+  // ! also add that ids detail/object into productDetails array.
 
-// ! if cartList array is not empty , then traverse through cartlist array and find if the clicked card's id 
-// ! already present in carList array or not.
-
-// ! if the clicked card's id is not already present then add it to cartList array.
-// ! also add that ids detail/object into productDetails array.
-
-// ! if the clicked card's id is already present then dont add it to cartList array.
-// ! only add that ids detail/object into productDetails array, with increase quantity.
+  // ! if the clicked card's id is already present then dont add it to cartList array.
+  // ! only add that ids detail/object into productDetails array, with increase quantity.
 
   if (cartList.length == 0) {
     cartList.push(id);
@@ -222,8 +261,7 @@ function addtocart(id) {
       price: productDetails[index].price,
     };
     productDetailsInCart.push({ ...obj });
-  } 
-  else {
+  } else {
     let flag = 0;
     // function to check cartList array
     for (let index = 0; index < cartList.length; index++) {
@@ -253,7 +291,7 @@ function addtocart(id) {
     }
   }
 
-// ! Rendering prodcuctDetailsInCart array to show all cart elements
+  // ! Rendering prodcuctDetailsInCart array to show all cart elements
   mainCartContent.innerHTML = "";
 
   productDetailsInCart.forEach((item, index) => {
@@ -263,12 +301,13 @@ function addtocart(id) {
     cartData.innerHTML += `
 
     <img src="${productDetailsInCart[index].img}"></img>
-    <span>coffee</span>
+    <span>${productDetailsInCart[index].name}</span>
     <span class="unitprice">$${productDetailsInCart[index].price}</span>
     <span class="unit">${productDetailsInCart[index].quantity}</span>
-    <button class="RemoveItemBtn" onclick = "deleteItem(${index,id})">Remove</button>`;
- // index = for productDetailsInCart array
-// id = for cartList array
+    <button class="RemoveItemBtn" data-itemname = ${productDetailsInCart[index].name} data-itemid = "${index}"
+    
+    onclick = "deleteItem(event)">Remove</button>`;
+
     document.querySelector(".mainCartContent").appendChild(cartData);
   });
 
@@ -279,34 +318,8 @@ function addtocart(id) {
 
   para.insertAdjacentHTML("afterbegin", notificationData);
   document.querySelector(".cartBtnNotfication").appendChild(para);
- 
-  // ! calling function to set the price in total
-  function setTotalPrice() {
-     let eachItemPrice = 0;
-    let totalPrice = 0;
- 
-
-    // ! function to calculate total price
-    productDetailsInCart.forEach((item, index) => {
-      eachItemPrice = item.quantity * item.price;
-
-      totalPrice += eachItemPrice;
-    });
- 
-    let totalpricediv = document.createElement("div");
-    let totalPriceData = `<h1 class="merii-font">Total $${totalPrice}</h1>`;
-    // console.log(productDetailsInCart)
-
-    totalpricediv.insertAdjacentHTML("afterbegin", totalPriceData);
-
-    //  sidebar_container.appendChild(totalpricediv);
-    mainCartContent.appendChild(totalpricediv);
-  }
 
   setTotalPrice();
-
-  console.log(productDetailsInCart)
-
 }
 
 /** 
@@ -369,7 +382,6 @@ if (everything_main_products) {
 
 // ! Sidebar menu functionality
 const addSidebarVisible = () => {
-  // console.log("working");
   sidebar.classList.add("sidebar-visible");
 };
 
@@ -382,4 +394,3 @@ sidebarClosebtn.addEventListener("click", removeSidebarVisible);
 
 // ! *******************************************************************
 // ! productlikeBtn & addtocarticonBtn  functionality
- 
