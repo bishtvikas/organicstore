@@ -10,6 +10,11 @@
 
 body {
   position: relative;
+  
+}
+
+body::-webkit-scrollbar{
+  display: none;
 }
 
 .merii-font {
